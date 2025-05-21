@@ -1,6 +1,6 @@
 # Гостиничный бизнес и обслуживание гостей
 
-![Python](https://img.shields.io/badge/python-3.11-blue.svg)
+![Python](https://img.shields.io/badge/python-3.10-blue.svg)
 ![Coverage](https://img.shields.io/badge/coverage-92%25-green.svg)
 ![PEP8](https://img.shields.io/badge/code%20standart-PEP8-brightgreen.svg)
 
