@@ -102,8 +102,10 @@ classDiagram
 python run_tests.py
 ```
 Отчеты:
-Консольный вывод (покрытие TOTAL)
-HTML-отчет в папке "coverage_report/"
+
+Консольный вывод (покрытие TOTAL);
+
+HTML-отчет в папке "coverage_report/".
 
 ## Требования
 
