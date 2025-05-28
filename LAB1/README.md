@@ -37,46 +37,59 @@ staff.py - сущность сотрудника;
 menu.py - главное меню системы;
 main.py - точка входа.
 
+## Операции системы
+### Бронирование номера
+**Описание:**  
+Процесс выбора номера с улучшением его качества и получения данных о брони.
 
-### Диаграмма классов (основные сущности)
-```mermaid
-classDiagram
-    Person <|-- Guest
-    Person <|-- Staff
-    Guest "1" *-- "1" Booking
-    Reception "1" *-- "1..*" Staff
-    
-    class Person {
-        +str first_name
-        +str last_name
-        +str surname
-        +add_person()
-    }
-    
-    class Guest {
-        +Booking booking
-        +dict services
-        +add_guest()
-        +order_cleaning()
-    }
-    
-    class Booking {
-        +int room_quality
-        +int service_level
-        +select_room()
-        +upgrade_service()
-    }
-    
-    class Staff {
-        +int service_quality
-        +confirm_booking()
-    }
-    
-    class Reception {
-        +list staff
-        +check_service_quality()
-    }
+**Методы:**
+```python
+select_room()    
+upgrade_room()      
+get_booking_data()
 ```
+**Атрибуты:**
+
+### Регистрация гостей
+**Описание:**
+Ввод и валидация данных гостя.
+
+**Методы:**
+```python
+add_guest()      
+validate_name()     
+```
+### Дополнительные услуги
+**Описание:**  
+Операции уборки номера, питания в ресторане и расчета стоимости услуг.
+
+**Методы:**
+```python
+order_cleaning()
+order_food()
+get_services_cost() 
+```
+### Выселение и оплата
+Операция выселения из номера и итоговой оплаты.
+
+**Метод:** 
+```python
+check_out_menu()
+```
+**Процесс выселения и оплаты:**
+
+    Расчет базовой стоимости ($100)
+
+    Добавление стоимости услуг
+
+    Применение скидок:
+
+        За имя администратора (-$5)
+
+        За оценку номера (1-5★ = -$2/★)
+
+    Минимальная итоговая цена: $60
+
 ## Использование
 
 ### Запуск системы:
