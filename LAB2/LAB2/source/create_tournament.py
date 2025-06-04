@@ -32,7 +32,6 @@ def create_tournament(file_path: str, tournament: Tournament):
         if os.path.exists(file_path):
             parser.parse(file_path)
 
-        # Преобразуем объект Tournament в словарь для записи
         new_tournament = {
             "name": tournament.name,
             "date": tournament.date.isoformat(),
