@@ -20,7 +20,7 @@ def create_input_form(page: ft.Page, highlighted_tournaments: HighlightedTournam
         try:
             if e.control.value:
                 selected_date = datetime.strptime(e.control.value, "%Y-%m-%d").date()
-                print(f"Manual date input: {selected_date}")  # Отладка
+                print(f"Manual date input: {selected_date}") 
                 created_tournament.set_date(selected_date)
             else:
                 created_tournament.set_date(None)
