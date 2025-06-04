@@ -1,6 +1,6 @@
 class TournamentPage:
     __current_page: int = 1
-    __items_per_page: int = 10  # Изменяем на 10
+    __items_per_page: int = 10 
 
     def set_current_page(self, current_page: int):
         self.__current_page = current_page
