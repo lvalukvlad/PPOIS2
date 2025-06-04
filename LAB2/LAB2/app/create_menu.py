@@ -151,7 +151,7 @@ def create_menu(page: ft.Page, file_path: str, close_dialog):
             highlighted_tournaments_parameters_to_none()
             update_highlighted_tournaments()
             page.update()
-            close_dialog()  # Используем переданную функцию для закрытия
+            close_dialog()
             return
         error_value = 'Не заполнены все поля'
         update_error()
