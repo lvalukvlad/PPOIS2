@@ -60,7 +60,6 @@ class HighlightedTournaments:
 
         return filtered if filtered else None
 
-    # Сеттеры и геттеры для всех фильтров
     def set_name(self, name: Optional[str]):
         self.__name = name.strip() if name else None
 
