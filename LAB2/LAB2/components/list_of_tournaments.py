@@ -17,7 +17,7 @@ def list_of_tournaments(page: ft.Page, tournaments: List[Tournament], tournament
     tournaments_list = ft.Column(
         spacing=10,
         scroll=ft.ScrollMode.ALWAYS,
-        height=400,  # Увеличиваем высоту для 10 записей
+        height=400, 
         alignment=ft.MainAxisAlignment.CENTER,
         horizontal_alignment=ft.CrossAxisAlignment.CENTER
     )
@@ -32,7 +32,7 @@ def list_of_tournaments(page: ft.Page, tournaments: List[Tournament], tournament
         for tournament in tournaments[start_index:end_index]:
             count += 1
             tournament_card = ft.Container(
-                content=ft.Column([  # Изменяем на Column для лучшего отображения
+                content=ft.Column([ 
                     ft.Text(f"Название: {getattr(tournament, 'name', 'неизвестно')}", size=16, weight=ft.FontWeight.BOLD, color='#FDD3E8'),
                     ft.Text(f"Дата: {getattr(tournament, 'date', 'неизвестно')}", color='#FDD3E8'),
                     ft.Text(f"Спорт: {getattr(tournament, 'sport_type', 'неизвестно')}", color='#FDD3E8'),
