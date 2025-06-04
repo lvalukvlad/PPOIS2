@@ -12,7 +12,6 @@ def main_menu(page: ft.Page, file_path: str, tournaments: list):
             width=page.width
         )
 
-    # Если файл выбран, но турниров нет, показываем сообщение об ошибке
     if not tournaments:
         return ft.Container(
             content=ft.Text('Нет данных о турнирах в файле', size=24, color='#FF92AD'),
