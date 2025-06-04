@@ -76,7 +76,6 @@ def pagination(page: ft.Page, length: int, tournament_page, update_output):
         on_submit=on_per_page_submit
     )
 
-    # Инициализируем текущую страницу на 1
     new_current_page(1)
 
     navigation = ft.Row(
